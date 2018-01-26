@@ -49,7 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data.Entities\Data.Entities.csproj">

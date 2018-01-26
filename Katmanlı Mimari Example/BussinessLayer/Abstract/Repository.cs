@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DataAccessLayer.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace DataAccessLayer.EntityFramework
+namespace BussinessLayer.Abstract
 {
     public class Repository<T> : IRepository<T> where T : class
     {

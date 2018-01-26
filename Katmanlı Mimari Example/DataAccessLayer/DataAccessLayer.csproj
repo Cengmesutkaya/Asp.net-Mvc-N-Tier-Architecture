@@ -52,8 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramework\DatabaseContext.cs" />
-    <Compile Include="EntityFramework\IRepository.cs" />
-    <Compile Include="EntityFramework\Repository.cs" />
     <Compile Include="EntityFramework\Initializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

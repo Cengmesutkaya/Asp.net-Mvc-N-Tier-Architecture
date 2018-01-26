@@ -1,8 +1,5 @@
-﻿@using Data.Entities
-@model List<Student>
-@{
-    @ViewBag.Tite = "Katmanlı Mimari";
-}
+﻿@model IEnumerable<Data.Entities.Student>
+
 <br />
 <a href="@Url.Action("Create","Home")" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Yeni Öğrenci Ekle </a>
 <br /><br />

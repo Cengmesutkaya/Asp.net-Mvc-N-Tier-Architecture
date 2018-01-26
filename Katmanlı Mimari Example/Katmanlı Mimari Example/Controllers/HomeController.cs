@@ -11,10 +11,11 @@ namespace Katmanlı_Mimari_Example.Controllers
 {
     public class HomeController : Controller
     {
-        Repository<Student> _repoStudent = new Repository<Student>();
+        StudentManager _repoStudent = new StudentManager();
         public ActionResult Index()
         {
-            return View(_repoStudent.List());
+            var studentList = _repoStudent.List();
+            return View(studentList);
         }
         public ActionResult Create()
         {
