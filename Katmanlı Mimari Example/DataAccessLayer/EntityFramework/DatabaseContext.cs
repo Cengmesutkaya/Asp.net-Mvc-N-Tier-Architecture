@@ -11,5 +11,7 @@ namespace DataAccessLayer.EntityFramework
     public class DatabaseContext:DbContext
     {
         public DbSet<Student> student { get; set; }
+        public DbSet<LoginUser> LoginUsers { get; set; }
+
     }
 }
