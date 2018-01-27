@@ -49,5 +49,5 @@ namespace BussinessLayer.Abstract
         {
             return _objectSet.Find(Id);
         }
-    }
+    } 
 }

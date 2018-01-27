@@ -14,7 +14,7 @@ namespace Data.Entities
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required,StringLength(50)]
+        [Required(ErrorMessage ="Lütfen bir ad soyad giriniz!."),StringLength(50,ErrorMessage ="Öğrenci Adı max 50 karakter olabilir.")]
         public string StudentName { get; set; }
     }
 }

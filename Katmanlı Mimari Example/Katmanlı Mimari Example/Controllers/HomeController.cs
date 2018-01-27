@@ -22,13 +22,18 @@ namespace Katmanlı_Mimari_Example.Controllers
         {
             return View();
         }
-
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(Student _student)
         {
-            _repoStudent.Insert(_student);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _repoStudent.Insert(_student);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(_student);
+            }
         }
         public ActionResult Delete(int? Id)
         {
@@ -36,8 +41,6 @@ namespace Katmanlı_Mimari_Example.Controllers
            _repoStudent.Delete(_student);
             return RedirectToAction("Index");
         }
-        
-
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -45,7 +48,7 @@ namespace Katmanlı_Mimari_Example.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Student _student = _repoStudent.Find(x => x.Id == id.Value);
+            Student _student = _repoStudent.Find(x => x.Id == id);
 
             if (_student == null)
             {
@@ -53,7 +56,6 @@ namespace Katmanlı_Mimari_Example.Controllers
             }
             return View(_student);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Student _student)
