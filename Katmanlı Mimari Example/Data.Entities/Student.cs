@@ -9,12 +9,10 @@ using System.Threading.Tasks;
 namespace Data.Entities
 {
     [Table("Student")]
-    public class Student
+    public class Student:Base
     {
-        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
-        [Required(ErrorMessage ="Lütfen bir ad soyad giriniz!."),StringLength(50,ErrorMessage ="Öğrenci Adı max 50 karakter olabilir.")]
-        public string StudentName { get; set; }
+        [Required(ErrorMessage ="Lütfen bir ad soyad giriniz!."),
+            StringLength(50,ErrorMessage ="Öğrenci Adı max 50 karakter olabilir.")]
+        public string Name { get; set; }
     }
 }
